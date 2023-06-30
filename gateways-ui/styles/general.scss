@@ -1,0 +1,85 @@
+@import "/styles/general-colors-variables.scss";
+
+body {
+    @apply font-sans;
+}
+
+button {
+    padding: 4px;
+    border-radius: 4px;
+    border-color: $dark-color;
+    border-width: 2px;
+    background-color: $dark-color;
+    color: white;
+}
+
+input, select {
+    border-radius: 4px;
+    border-width: 2px;
+    border-color: $dark-color;
+    outline: none;
+    padding: 4px;
+}
+
+a {
+    border-bottom: 2px solid $dark-color;
+    color: $dark-color;
+}
+
+a:hover {
+    border-bottom: 2px solid $base-color;
+}
+
+button:hover {
+    padding: 4px;
+    border-radius: 4px;
+    background-color: white;
+    color: $dark-color;
+}
+
+.normal-spaced {
+    margin: 8px;
+}
+
+.v-normal-spaced {
+    margin: 8px 0px 8px 0px;
+}
+
+.h-normal-spaced {
+    margin: 0px 8px 0px 8px;
+}
+
+.title {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    font-weight: bold;
+    @apply font-mono;
+    margin-bottom: 8px;
+}
+
+.error {
+    padding: 8px;
+    background-color: rgb(241, 202, 202);
+    color: rgb(114, 40, 40);
+    border-radius: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.global-wrapper {
+    padding: 8px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 4px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+}
