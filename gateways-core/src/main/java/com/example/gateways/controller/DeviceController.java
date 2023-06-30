@@ -22,25 +22,25 @@ import java.util.List;
 @CrossOrigin("http://localhost:3000")
 public class DeviceController {
 
-    private DeviceService DeviceService;
+    private DeviceService deviceService;
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public void createDevice(@RequestParam("gatewayId") Long gatewayId, @RequestBody DeviceDto DeviceDto) {
-        DeviceService.createDevice(gatewayId, DeviceDto);
+        deviceService.createDevice(gatewayId, DeviceDto);
     }
 
     @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public DeviceDto findDevice(@PathVariable("id") Long id) {
-        return DeviceService.findDevice(id);
+        return deviceService.findDevice(id);
     }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public List<DeviceDto> getAllDevices() {
-        return DeviceService.getAllDevices();
+        return deviceService.getAllDevices();
     }
 
     @DeleteMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public void deleteDevice(@PathVariable("id") Long id) {
-        DeviceService.deleteDevice(id);
+        deviceService.deleteDevice(id);
     }
 }
